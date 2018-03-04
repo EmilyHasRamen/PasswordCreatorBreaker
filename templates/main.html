@@ -4,7 +4,7 @@
 	<title>Diceware Hack The Fog</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='../static/styles.css') }}">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -33,10 +33,57 @@
 			<!-- Standard button -->
 			<button type="submit" name="num" value="9" class="btn btn-default btn-action">9 words</button>
 
-			<label class="sr-only num-of input-control" for="exampleInputEmail2">Digit Length</label>
-	    	<input type="text" name="digit" class="input-control form-control form-inline " id="input" placeholder="Enter number of dice to roll (options: 4 or 5)">
+			<div class="input-container" style="width:300px; margin-top: 25px;">
+				<label class="sr-only num-of input-control" for="exampleInputEmail2">Digit Length</label>
+	    		<input type="text" name="digit" class="input-control form-control form-inline " id="input" placeholder="Enter number of dice to roll (options: 4 or 5)">
+			</div>
 		</form>
+
+		<div style="width: 500px;">
+		<div class="panel panel-default">
+	  	<div class="panel-heading">
+	    	<h3 class="panel-title">Password Here</h3>
+	  	</div>
+	  	<div class="panel-body">
+	    	{{genpassword}}
+	  	</div>
+		</div>
+		</div>
+
+		<!-- YOU GUYS WORK HERE -->
+		<!-- TEXT BOX -->
+		<div style="width: 500px;">
+		<div class="panel panel-default">
+	  	<div class="panel-heading">
+	    	<h3 class="panel-title">TITLE</h3>
+	  	</div>
+	  	<div class="panel-body">
+	    	HERE
+	  	</div>
+		</div>
+		</div>
+		<!-- TEXT BOX -->
+		<div style="width: 500px;">
+		<div class="panel panel-default">
+	  	<div class="panel-heading">
+	    	<h3 class="panel-title">TITLE</h3>
+	  	</div>
+	  	<div class="panel-body">
+	    	HERE
+	  	</div>
+		</div>
+		</div>
+		<!-- TEXT BOX -->
+		<div style="width: 500px;">
+		<div class="panel panel-default">
+	  	<div class="panel-heading">
+	    	<h3 class="panel-title">TITLE</h3>
+	  	</div>
+	  	<div class="panel-body">
+	    	HERE
+	  	</div>
+		</div>
+		</div>
 	</div>
-	<textarea id="password">{{genpassword}}</textarea>
 </body>
 </html>
