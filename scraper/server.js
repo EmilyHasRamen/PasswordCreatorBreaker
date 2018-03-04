@@ -8,7 +8,15 @@ app.get('/scrape', function(req, res) {
 
 // url below
 
-url = ''
+url = 'https://www.mdbg.net/chinese/dictionary'
+
+request(url, function(error, response, html){
+
+  if)!error){
+    
+    var $ = cheerio.load(html);
+    
+    var 
 
 })
 
