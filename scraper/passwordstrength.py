@@ -28,16 +28,15 @@ class PasswordStrength(object):
 		textinput.send_keys(self.word)
 
 		strength = driver.find_element_by_id("complexity")
-		tim = driver.find_element_by_id("score")
-		print strength.text
-		print tim.text
+		percentage = driver.find_element_by_id("score")
+		return strength.text, percentage.text
 	def close(self):
 		self.driver.close()
 		print("Closed window.")
 	def run(self):
 		self.connect()
-		self.checkWordStrength()
+		strength, percentage = self.checkWordStrength()
+		print strength
+		print percentage
 		self.close()
-word = 'alskdfj'
-bot = PasswordStrength(word)
-bot.run()
+		return strength, percentage
