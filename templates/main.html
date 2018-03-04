@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Diceware Hack The Fog</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../static/styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="nav-header">
+				<a class="navbar-brand" href="/">
+					Diceware
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="content">
+		<h2>CSS Template</h2>
+		<form method="POST" action="/makepassword">
+			<!-- Standard button -->
+			<button type="submit" name="num" value="5" class="btn btn-default btn-action">5 words</button>
+			<!-- Standard button -->
+			<button type="submit" name="num" value="6" class="btn btn-default btn-action">6 words</button>
+			<!-- Standard button -->
+			<button type="submit" name="num" value="7" class="btn btn-default btn-action">7 words</button>
+			<!-- Standard button -->
+			<button type="submit" name="num" value="8" class="btn btn-default btn-action">8 words</button>
+			<!-- Standard button -->
+			<button type="submit" name="num" value="9" class="btn btn-default btn-action">9 words</button>
+
+			<label class="sr-only num-of input-control" for="exampleInputEmail2">Digit Length</label>
+	    	<input type="text" name="digit" class="input-control form-control form-inline " id="input" placeholder="Enter number of dice to roll (options: 4 or 5)">
+		</form>
+	</div>
+	<textarea id="password">{{genpassword}}</textarea>
+</body>
+</html>
